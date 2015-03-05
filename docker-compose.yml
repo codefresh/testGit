@@ -1,0 +1,13 @@
+router:
+  image: codefresh/cf-router
+  environment:
+    NODE_ENV: development-docker
+  links:
+   - cfui
+   - cfapi
+  ports:
+   - "8000:80"
+cfui:
+  image:  codefresh/cf-ui
+cfapi:
+  image:  codefresh/cf-api
